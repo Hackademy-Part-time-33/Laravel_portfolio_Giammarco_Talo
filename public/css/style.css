@@ -1,0 +1,12 @@
+a, h1, h2, h3{
+    color: white !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: black;
+    background-color: transparent;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
