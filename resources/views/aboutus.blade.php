@@ -27,8 +27,12 @@
               Servizi
             </a>
             <ul class="dropdown-menu bg-black">
-              @foreach ($array as $element)
-              <li><a class="dropdown-item" href="#">{{ $element }}</a></li>
+              @foreach (App\Http\Controllers\PageController::$services as $element)
+              <li>
+                <a class="dropdown-item" href="{{ route('service', ['service' => $element['uri']]) }}">
+                  {{ $element['name'] }}
+                </a>
+              </li>
               @endforeach
             </ul>
           </li>

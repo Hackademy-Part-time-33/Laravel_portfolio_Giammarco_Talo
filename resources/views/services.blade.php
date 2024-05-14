@@ -28,8 +28,12 @@
               Servizi
             </a>
             <ul class="dropdown-menu bg-black">
-              @foreach ($array as $element)
-              <li><a class="dropdown-item" href="#">{{ $element }}</a></li>
+              @foreach (App\Http\Controllers\PageController::$services as $element)
+              <li>
+                <a class="dropdown-item" href="{{ route('service', ['service' => $element['uri']]) }}">
+                  {{ $element['name'] }}
+                </a>
+              </li>
               @endforeach
             </ul>
           </li>
@@ -38,9 +42,13 @@
     </div>
   </nav>
   <h1>Servizi Offerti</h1>
-  <ul>
-    @foreach ($array as $element)
-    <li><a class="dropdown-item" href="#">{{ $element }}</a></li>
+  <ul class="dropdown-menu bg-black">
+    @foreach (App\Http\Controllers\PageController::$services as $element)
+    <li>
+      <a class="dropdown-item" href="{{ route('service', ['service' => $element['uri']]) }}">
+        {{ $element['name'] }}
+      </a>
+    </li>
     @endforeach
   </ul>
   {{-- footer --}}
@@ -51,7 +59,7 @@
       </div>
     </footer>
   </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
-  </html>
-  {{-- {{route('detail', ['service' => $element])}} --}}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
+{{-- {{route('detail', ['service' => $element])}} --}}
