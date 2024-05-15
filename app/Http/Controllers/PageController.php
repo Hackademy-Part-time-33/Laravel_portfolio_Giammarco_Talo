@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+
     public function homepage()
     {
         return view('homepage');
@@ -52,18 +53,14 @@ class PageController extends Controller
     {
         
         $titolo = 'I miei servizi scontati';
-        return view(
-            'services',
-            [
-                'services' => self::$services, 'titolo' => $titolo
-                ]
-            );
+        return view('services',['services' => self::$services, 'titolo' => $titolo]);
         }
         
         public function service($service)
         {   
             foreach (self::$services as $element) {
                 if ($service == $element['uri']) {
+                    // dd($element);
                     return view('detail', ['service' => $element]);
                 }
             }
