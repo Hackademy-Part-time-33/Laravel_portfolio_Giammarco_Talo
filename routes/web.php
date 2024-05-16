@@ -11,7 +11,11 @@ Route::get('/Servizi-Offerti', [PageController::class, 'services'])->name('servi
 
 Route::get('/Servizi-Offerti/{service}', [PageController::class, 'service'])->name('service');
 
-    
+Route::get('/Contatti', [PageController::class, 'contacts'])->name('contacts');
+
+Route::post('', [PageController::class, 'send'])->name('send');
+
+Route::get('/Grazie', [PageController::class, 'thankyou'])->name('thankyou');
     
     
     

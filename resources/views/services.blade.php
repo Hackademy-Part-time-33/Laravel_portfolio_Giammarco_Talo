@@ -10,7 +10,7 @@
           <div class="card shadow-sm">
             <img src="/images/placeholder.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="{{ $element['name'] }}">
             <div class="card-body">
-              <h2>{{ $element['name'] }}</h2>
+              <h3 class="text-dark">{{ $element['name'] }}</h3>
               <p class="card-text">Tempo di realizzazione: {{ $element['tempo_di_realizzazione'] }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <small class="text-body-secondary">Prezzo base: {{ $element['costo'] }}€</small>

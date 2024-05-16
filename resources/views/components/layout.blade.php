@@ -29,6 +29,9 @@
             <a class="nav-link dropdown-toggle" href="{{ route('services') }}" id="navbarDropdown" role="button" aria-expanded="false">
               Servizi
             </a>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ route('contacts') }}">Contatti</a>
+            </li>
             <ul class="dropdown-menu bg-black">
               @foreach (App\Http\Controllers\PageController::$services as $element)
               <li>
